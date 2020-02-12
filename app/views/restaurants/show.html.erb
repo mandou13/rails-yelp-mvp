@@ -7,6 +7,13 @@
   <i class="fas fa-plus"></i> Add a Review
 <% end %>
 
+<div class='row justify-content-center mt-5'>
+  <% @restaurant.reviews.each do |review| %>
+    <div class='col-3 card'>
+      <%= review.content %> [<%= review.rating %>]
+    </div>
+  <% end %>
+</div>
 <%= link_to restaurants_path, id:"next" do %>
   <i class="fas fa-undo-alt"></i> Back to Restaurants
 <% end %>

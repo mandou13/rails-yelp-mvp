@@ -4,10 +4,11 @@
   <i class="fas fa-plus"></i> Add a new Restaurant
 <% end %>
 
-<ul>
-  <% @restaurants.each do |restaurant|  %>
-    <li> <%= link_to restaurant.name, restaurant_path(restaurant)%> </li>
-  <% end %>
-</ul>
+<div class='row justify-content-center mt-5'>
 
-
+      <% @restaurants.each do |restaurant|  %>
+      <div class='col-3 card'>
+        <%= link_to restaurant.name, restaurant_path(restaurant)%>
+      </div>
+      <% end %>
+</div>
